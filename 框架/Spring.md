@@ -69,12 +69,20 @@ UserDao userDao = (UserDao) applicationContext.getBean("UserDao");
 `destroy-method`来指定销毁时执行的方法；也可以使用`DisposableBean`接口
 # 4. AOP
 ## 术语
-连接点：是程序执行过程中能够应用通知的**所有点**
-切点：用来筛选连接点，定义了**被应用**的所在位置
+连接点：是程序执行过程中**可以**应用通知的**所有点**
+
+切点：用来筛选连接点，定义了**被应用**的所在位置，其实就是**实际被应用**的地方。**切点来筛选连接点，选中想要的方法**
+
 通知：切面必须完成的工作被称之为通知,有五种(`Before`,`After`,`After-return`,`After-throwing`,`Around`)
-切面：它是通知和切点的结合。通知和切点共同定义了关于切面的全部内容（它是什么，在何时，和何处完成其功能）
+
+切面：它是通知和切点的结合。通知和切点共同定义了关于切面的全部内容（它是什么，在何时，和何处完成其功能）。**切面就是切点和通知统称起来的东西。具体到了某个方法的某个位置（执行前或者执行后），要做什么事（具体的事情由通知定义）**
+
 ## 编写切点
-`execution(* com.bjsxt.arnold.Student.play(..) and bean(teacher))`
+**切点需要在配置文件中声明**
+
+```
+execution(* com.bjsxt.arnold.Student.play(..)
+```
 # 5. annotation
 
 常用注解
