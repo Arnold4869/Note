@@ -26,7 +26,7 @@ java 中有两种方式创建一个新的**对象**
 而 `clone` 在第一步是和 `new` 相似的，都是分配内存，调用 `clone` 方法时，分配的内存和源对象（即调用 `clone` 方法的对象）相同，然后再使用原对象中对应的各个域，填充新对象的域， 填充完成之后，`clone`方法返回，一个新的相同的对象被创建，同样可以把这个新对象的引用发布到外部。
 
 ### 浅拷贝 or 深拷贝
-![浅拷贝和深拷贝](https://github.com/Arnold4869/note/blob/master/images/clone01.png?row=true "浅拷贝 深拷贝")
+![浅拷贝和深拷贝](https://github.com/Arnold4869/note/blob/master/images/clone01.png?raw=true "浅拷贝 深拷贝")
 
 对于浅拷贝，对象内部引用型的指向和原型对象内部引用型指向**一致**
 而深拷贝，则是内部引用型的指向和原有的不一致，也经过拷贝处理
