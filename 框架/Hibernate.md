@@ -1,9 +1,14 @@
 [TOC]
+
+# 0. 主要架构
+![Hibernate 架构](https://github.com/Arnold4869/note/blob/master/images/hibernate_architecture.jpg?raw=true "Hibrenate 架构")
+
 # 1. 配置流程
 1. 将hibernate包下/lib/requird下的包导入项目，如果非web项目还需要build path
 2. 拷贝hibernate的主配置文件**hibernate.cfg.xml**到src根目录
 3. 配置配置文件
 4. 每个POJO类都应该在它所在的包内有个对应名字**Xxx.hbm.xml**的配置文件
+
 
 # 2. 配置文件配置
 ## 2.1 主配置文件hibernate.cfg.xml
