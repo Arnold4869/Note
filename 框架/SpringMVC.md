@@ -61,7 +61,6 @@
 		return "redirect:/teacher/teach.action";
 	}
 ```
-
 # 3. Ajax
 使用注解
 前端：
