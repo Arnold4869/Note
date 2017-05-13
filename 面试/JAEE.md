@@ -56,7 +56,7 @@ public class MyServletContextListener implements ServletContextListener {
 
 ### 拦截器
 
-拦截器是在面向切面编程中应用的，就是在你的 service 或者一个方法前调用一个方法，或者在方法后调用一个方法。是基于 Java 的反射机制。拦截器不是在 web.xml，比如 struts 在 struts.xml 中配置，
+拦截器是在**面向切面**编程中应用的，就是在你的 service 或者一个方法前调用一个方法，或者在方法后调用一个方法。是基于 Java 的反射机制。拦截器不是在 web.xml，比如 struts 在 struts.xml 中配置，
 
 ```java
 public Object invoke(Object proxy, Method method, Object[] args) throws Throwable
