@@ -13,11 +13,19 @@
   - [ ] 爬虫
   - [ ] 聊天
 - [ ] 多线程
+  - [ ] 实现方法
+    - [ ] Call
+    - [ ] Runnable
+    - [ ] Thread
+    - [ ] 线程池
+  - [ ] 锁
+    - [ ] synchronized
+    - [ ] lock
   - [ ] 死锁
-  - [ ] synchronized
-  - [ ] lock
-  - [ ] Call
-  - [ ] Runnable
+
+- [ ] 反射
+  - [ ] 查询原数据
+  - [ ] 复制出来
 
 # 前端
 - [ ] HTML
