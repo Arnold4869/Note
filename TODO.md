@@ -68,3 +68,9 @@
 - [ ] 爬虫框架
   - [ ] WebMagic 框架
   - [ ] Scarapy 框架【经典】
+
+# 工具软件
+- [ ] Vim
+- [ ] PowerDesign
+- [ ] Eclipse
+- [ ] Ideal
