@@ -1,6 +1,5 @@
 TOC]
 
-
 # SE
 - [ ] IO 流
   - [ ] 字节流和字符流
@@ -68,6 +67,10 @@ TOC]
 - [ ] 爬虫框架
   - [ ] WebMagic 框架
   - [ ] Scarapy 框架【经典】
+- [ ] 搜索
+  - [ ] Elasticsearch
+  - [ ] solr
+  - [ ] Lucune
 
 # 工具软件
 - [ ] Vim
