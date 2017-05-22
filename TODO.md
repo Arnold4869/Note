@@ -6,8 +6,8 @@ TOC]
   - [ ] 字节流和字符流
   - [ ] NIO
 - [ ] 集合
-  - [ ] 原理
-  - [ ] 线程安全
+  - [x] 原理
+  - [x] 线程安全
   - [ ] 排序
 - [ ] 网络编程
   - [ ] 爬虫
@@ -15,11 +15,11 @@ TOC]
 - [ ] 多线程
   - [ ] 实现方法
     - [ ] Call
-    - [ ] Runnable
-    - [ ] Thread
-    - [ ] 线程池
+    - [x] Runnable
+    - [x] Thread
+    - [x] 线程池
   - [ ] 锁
-    - [ ] synchronized
+    - [x] synchronized
     - [ ] lock
   - [ ] 死锁
 
