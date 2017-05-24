@@ -1,4 +1,5 @@
 [TOC]
+![Mybatis主要构件](https://raw.githubusercontent.com/Arnold4869/note/master/images/Mybatis%E4%B8%BB%E8%A6%81%E6%9E%84%E4%BB%B6.png)
 # 1. 基本流程
 - 拷贝`Mybatis`的主配置文件
 - 拷贝`lib`中关于代理的`jar`包
