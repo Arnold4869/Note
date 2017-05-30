@@ -67,10 +67,12 @@ TOC]
 - [ ] 爬虫框架
   - [ ] WebMagic 框架
   - [ ] Scarapy 框架【经典】
+
 - [ ] 搜索
   - [ ] Elasticsearch
   - [ ] solr
   - [ ] Lucune
+
 - [ ] 容器
 - [ ] Restful
 - [ ] Spring Boot
@@ -81,4 +83,4 @@ TOC]
 - [ ] Vim
 - [ ] PowerDesign
 - [ ] Eclipse
-- [ ] Ideal
+- [ ] IDEA
