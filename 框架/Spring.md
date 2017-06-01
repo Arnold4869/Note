@@ -90,3 +90,5 @@ execution(* com.bjsxt.arnold.Student.play(..)
 - `@Controller`:标注一个控制器组件类
 - `@Service`:标注一个业务逻辑组件类
 - `@Repository`:标注一个Dao组件类
+
+# 6. 事务管理

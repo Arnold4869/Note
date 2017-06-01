@@ -3,7 +3,54 @@
 ## 1.1 配置主配置文件路径和名字
 1. 在`web.xml`下配置`SpringMVC`的`servlet-class`和`url-pattern`
 2. 配置文件默认建立在`WEB-INFO`下且要求默认名为`servlet-name+"-servlet.xml"`，可以在配置`web.xml`时，在`servlet`中的`init-param`标签下指定配置文件的**路径**和**名字**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>ego-manager-web</display-name>
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/applicationContext-*.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring/springmvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
 
+	<!-- 解决post提交乱码filter begin -->
+	   <!-- 配置过滤器参数 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	   <!-- 配置过滤器的过滤范围 -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 解决post提交乱码filter end -->
+</web-app>
+```
 ## 1.2 主配置文件
 通过在后台Controllerr层配置``@RequestMapping`来实现前台页面`URI`的匹配
 对于需要后台向前台返回数据的情况，需要在对应的方法前添加`@ResponseBody`注解
