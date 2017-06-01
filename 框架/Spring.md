@@ -92,3 +92,39 @@ execution(* com.bjsxt.arnold.Student.play(..)
 - `@Repository`:标注一个Dao组件类
 
 # 6. 事务管理
+
+## 6.1 事务管理器的选择
+接口是 `PlatformTransactionManager`，具体的实现类根据不同情况选择
+![事务管理器的选择](https://raw.githubusercontent.com/Arnold4869/note/master/images/TransactionManagerforSpring.png)
+
+## 6.2 事务的隔离级别
+原因：**不同级别的事务会有不同的隐患**
+脏读：一个事务读取了另一个事务改写但还未提交的数据，如果这些数据被回滚，则读到的数据是无效的。
+
+不可重复读：在同一事务中，多次读取同一数据返回的结果有所不同。
+
+幻读：一个事务读取了几行记录后，另一个事务插入一些记录，幻读就发生了。再后来查询中，第一个事务就会发现有些原来没有的记录。
+
+### 几种隔离级别
+- Default：Spring 才有的默认选择项
+- READ_UNCOMMITED:允许你读取还未提交的改变了的数据。可能导致脏、幻、不可重复读
+- READ_COMMITTED：允许在并发事务已经提交后读取。可防止脏读，但幻读、不可重复度仍会发生
+- REPEATABLE_READ：对相同字段的多次读取是一致的，除非数据被事务本身改变。可防止脏读、不可重复读，但幻读仍可能发生
+- SERIALIZABLE：完全服从 ACID 原则，确保部发生脏、乱、不可重复读。但速度是最慢的。
+
+## 6.2 事务的传播行为
+**用来解决业务层方法之间的相互调用问题**。因为事务是控制在业务层的，如果业务层之间多个方法调用，事务的级别就乱了。
+
+- **PROPAGATION_REQUIRED** 如果存在一个事务，则支持当前事务。如果没有事务则开启一个新的事务。
+
+- **PROPAGATION_SUPPORTS** 如果存在一个事务，支持当前事务。如果没有事务，则非事务的执行。但是对于事务同步的事务管理器，PROPAGATION_SUPPORTS与不使用事务有少许不同。
+
+- **PROPAGATION_MANDATORY** 如果已经存在一个事务，支持当前事务。如果没有一个活动的事务，则抛出异常。
+
+- **PROPAGATION_REQUIRES_NEW** 总是开启一个新的事务。如果一个事务已经存在，则将这个存在的事务挂起。
+
+- **PROPAGATION_NOT_SUPPORTED** 总是非事务地执行，并挂起任何存在的事务。
+
+- **PROPAGATION_NEVER** 总是非事务地执行，如果存在一个活动事务，则抛出异常
+
+- **PROPAGATION_NESTED** 如果一个活动的事务存在，则运行在一个嵌套的事务中. 如果没有活动事务, 则按TransactionDefinition.PROPAGATION_REQUIRED 属性执行
