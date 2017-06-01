@@ -128,3 +128,14 @@ execution(* com.bjsxt.arnold.Student.play(..)
 - **PROPAGATION_NEVER** 总是非事务地执行，如果存在一个活动事务，则抛出异常
 
 - **PROPAGATION_NESTED** 如果一个活动的事务存在，则运行在一个嵌套的事务中. 如果没有活动事务, 则按TransactionDefinition.PROPAGATION_REQUIRED 属性执行
+
+## 6.3 Spring 控制事务的方式
+- 编程式事务管理
+		手动编写代码进行事务管理.(很少使用)
+- 声明式事务管理:
+		1. 基于TransactionProxyFactoryBean的方式.(很少使用)
+      **需要为每个进行事务管理的类,配置一个TransactionProxyFactoryBean进行增强.**
+		2. 基于AspectJ的XML方式.(经常使用)
+			**一旦配置好之后,类上不需要添加任何东西**
+		3. 基于注解方式.(经常使用)
+			**配置简单,需要在业务层上添加一个@Transactional的注解.**
