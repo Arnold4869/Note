@@ -108,7 +108,7 @@ execution(* com.bjsxt.arnold.Student.play(..)
 ### 几种隔离级别
 - Default：Spring 采用数据库默认隔离级别
 - READ_UNCOMMITED:允许你读取还未提交的改变了的数据。可能导致脏、幻、不可重复读
-- READ_COMMITTED：允许在并发事务已经提交后读取。可防止脏读，但幻读、不可重复度仍会发生
+- READ_COMMITTED：允许在并发事务已经提交后读取。可防止脏读，但幻读、不可重复读仍会发生
 - REPEATABLE_READ：对相同字段的多次读取是一致的，除非数据被事务本身改变。可防止脏读、不可重复读，但幻读仍可能发生
 - SERIALIZABLE：完全服从 ACID 原则，确保部发生脏、乱、不可重复读。但速度是最慢的。
 
