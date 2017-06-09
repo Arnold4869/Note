@@ -162,7 +162,24 @@ public class AjaxController {
 	}
 }
 ```
+# 6. 路由功能
+`@PathVariable` 用来获取 `URI`路径中的变量
 
+/{UserID}/find/{id}
+
+```java
+
+@RequestMapping("/{UserID}")
+public class ControllerTest{
+	@RequestMapping("/find/{id}")
+	public void find(@PathVariable String id,String name){
+		//方法实体
+
+	}
+
+```
+
+}
 # 7. 拦截器
 ## 7.1 实现接口`HandlerInterceptor`
 ## 7.2 继承`HandlerInterceptorAdaptor`抽象类
