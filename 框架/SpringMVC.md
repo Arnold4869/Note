@@ -168,16 +168,12 @@ public class AjaxController {
 /{UserID}/find/{id}
 
 ```java
-
 @RequestMapping("/{UserID}")
 public class ControllerTest{
-
 	@RequestMapping("/find/{id}")
 	public void find(@PathVariable String id,String name){
 		//方法实体
-
 	}
-
 }
 ```
 
