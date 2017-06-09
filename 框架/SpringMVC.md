@@ -168,6 +168,7 @@ public class AjaxController {
 /{UserID}/find/{id}
 
 ```java
+@Controller
 @RequestMapping("/{UserID}")
 public class ControllerTest{
 	@RequestMapping("/find/{id}")
@@ -176,6 +177,14 @@ public class ControllerTest{
 	}
 }
 ```
+
+## 6.1 匹配原则
+
+1. URI模板变量的数目和通配符数量的总和最少的那个路径模板更准确。
+2. 如果两个模板的URI模板数量和通配符数量总和一致，则路径更长的那个模板更准确
+3. 如果两个模板的数量和长度均一致，则那个具有更少通配符的模板是更加准确的
+
+
 
 # 7. 拦截器
 ## 7.1 实现接口`HandlerInterceptor`
