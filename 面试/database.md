@@ -25,3 +25,5 @@
 - Read Committed:只有在事务提交后，其更新结果才会被其他事务看见。可以解决脏读
 - Repeated Read：在一个事务中，对于同一份数据的读取结果总是相同的，无论是否有其他事务对这份数据进行操作，以及这个事务是否提交。可以解决脏读、不可重复读。
 - Serialization：事务串行化执行，隔离级别最高，牺牲了系统的并发性。可以解决并发事务的所有问题。
+
+![transaction_level](https://github.com/Arnold4869/note/blob/master/images/transaction_level.png?raw=true)
