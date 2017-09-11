@@ -61,6 +61,7 @@ UserDao userDao = (UserDao) applicationContext.getBean("UserDao");
 需要调用的形参类型为集合时，可以使用`<list.../>`、`<set.../>`、`<map.../>`和`<props.../>`分别来设置类型为`List`、`Set`、`Map`、`Properties`的集合参数值
 ## import
 # 3. Bean生命周期
+
 `Spring`只会管理`singleton`作用域的的`Bean`的生命周期，对于`prototype`作用域的`Bean`，`Spring`仅仅负责创建，当容器创建了`Bean`实例之后，`Bean`实例完全交给客户端代码管理。
 
 ## init
