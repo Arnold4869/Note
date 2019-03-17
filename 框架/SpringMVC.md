@@ -3,6 +3,7 @@
 ## 1.1 配置主配置文件路径和名字
 1. 在`web.xml`下配置`SpringMVC`的`servlet-class`和`url-pattern`
 2. 配置文件默认建立在`WEB-INFO`下且要求默认名为`servlet-name+"-servlet.xml"`，可以在配置`web.xml`时，在`servlet`中的`init-param`标签下指定配置文件的**路径**和**名字**
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
